@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const icons = [
   { href: "/", Icon: Home, label: "Home" },
-  { href: "/posts/[id]", Icon: Pencil, label: "Posts" },
+  { href: "/Blog", Icon: Pencil, label: "Blog" },
   { href: "https://github.com/Jose-Familia", Icon: Github, label: "GitHub"},
   { href: "https://www.linkedin.com/in/jrfamilia", Icon: Linkedin, label: "LinkedIn"},
   { href: "https://twitter.com", Icon: ({ size, ...props }) => (
