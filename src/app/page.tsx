@@ -1,15 +1,13 @@
-import BlurIn from "@/components/magicui/blur-in";
 import NavBar from "@/components/ui/navbar"
+import Home from "@/pages/home";
 
  
 export default function myApp() {
   return (
     <div>
-      <BlurIn
-       word={"Hi, I'm Jose Rene Familia"}
-       ></BlurIn>
-
+      <Home></Home>
       <NavBar></NavBar>
+
     </div>
   );
 }
