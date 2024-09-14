@@ -1,15 +1,15 @@
 export default function SkillsSection() {
   const skills = [
+    "HTML/CSS",
     "JavaScript",
     "React",
     "Node.js",
-    "TypeScript",
-    "HTML/CSS",
-    "Python",
-    "Git",
+    "Golang",
+    "MongoDB",
     "SQL",
-    "RESTful APIs",
-    "Responsive Design",
+    "Git",
+    "GitHub",
+    "Docker"
   ];
 
   return (
@@ -20,7 +20,7 @@ export default function SkillsSection() {
           {skills.map((skill) => (
             <span
               key={skill}
-              className="text-sm py-2 px-4 rounded-full shadow-md"
+              className="text-sm py-2 px-4 rounded-full shadow-md dark:bg-gray-800 bg-gray-100"
             >
               {skill}
             </span>
