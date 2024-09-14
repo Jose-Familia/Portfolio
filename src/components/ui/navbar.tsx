@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const icons = [
   { href: "/", Icon: Home, label: "Home" },
-  { href: "/Blog", Icon: Pencil, label: "Blog" },
   { href: "https://github.com/Jose-Familia", Icon: Github, label: "GitHub"},
   { href: "https://www.linkedin.com/in/jrfamilia", Icon: Linkedin, label: "LinkedIn"},
   { href: "https://twitter.com", Icon: ({ size, ...props }) => (
@@ -27,7 +26,7 @@ const icons = [
       <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
     </svg>
   ), label: "Twitter" },
-  { href: "/contact", Icon: Mail, label: "Contact" },
+  { href: "mailto:familiajoserene@gmail.com", Icon: Mail, label: "Contact" },
 ]
 
 export default function Component() {

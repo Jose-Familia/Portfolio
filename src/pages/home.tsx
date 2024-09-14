@@ -1,4 +1,5 @@
 import TypingAnimation from "@/components/typingAnimation";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -14,9 +15,9 @@ export default function Home() {
             </div>
 
             <div className=" flex text-md text-center">
-            <p className="text-md text-center justify-center px-72">
-            I am an Engineering Systems student with a passion for technology and continuous learning. With a strong foundation in frontend development, I have hands-on experience in technologies like React, and I proficient in working with databases, Golang, and Node.js. I thrive on solving complex problems and am always eager to take on new challenges that push me to expand my technical expertise. As someone who enjoys both learning and applying innovative solutions, I am committed to advancing my skills while contributing to impactful projects.
-            </p>
+                <p className="text-md text-center justify-center px-72">
+                I am an Engineering Systems student with a passion for technology and continuous learning. With a strong foundation in frontend development, I have hands-on experience in technologies like React, and I proficient in working with databases, Golang, and Node.js. I thrive on solving complex problems and am always eager to take on new challenges that push me to expand my technical expertise. As someone who enjoys both learning and applying innovative solutions, I am committed to advancing my skills while contributing to impactful projects.
+                </p>
             </div>   
       </div>
     );
