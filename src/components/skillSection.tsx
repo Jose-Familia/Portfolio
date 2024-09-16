@@ -1,32 +1,55 @@
-export default function SkillsSection() {
-  const skills = [
-    "HTML/CSS",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Golang",
-    "MongoDB",
-    "SQL",
-    "Git",
-    "GitHub",
-    "Docker"
-  ];
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code2, Database, Globe, Server } from "lucide-react"
 
+const skillsData = [
+  {
+    category: "Frontend",
+    icon: <Globe className="h-6 w-6 text-primary" />,
+    skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript", "HTML5", "CSS3"],
+  },
+  {
+    category: "Backend",
+    icon: <Server className="h-6 w-6 text-primary" />,
+    skills: ["Node.js", "Express"],
+  },
+  {
+    category: "Database",
+    icon: <Database className="h-6 w-6 text-primary" />,
+    skills: ["MongoDB", "PostgreSQL"],
+  },
+  {
+    category: "DevOps",
+    icon: <Code2 className="h-6 w-6 text-primary" />,
+    skills: ["Docker", "CI/CD", "Git", "GitHub Actions"],
+  },
+]
+
+export default function SkillsSection() {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
-        <div className="flex flex-wrap justify-center gap-3">
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="text-sm py-2 px-4 rounded-full shadow-md dark:bg-gray-800 bg-gray-100"
-            >
-              {skill}
-            </span>
+    <section className="py-8 bg-background flex items-center justify-center">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-2xl font-bold text-center mb-6">My Skills</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {skillsData.map((category) => (
+            <Card key={category.category} className="flex flex-col h-full">
+              <CardHeader className="flex flex-row items-center space-y-0 pb-2">
+                {category.icon}
+                <CardTitle className="text-sm ml-2">{category.category}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <div className="flex flex-wrap gap-1">
+                  {category.skills.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="text-xs px-1 py-0">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

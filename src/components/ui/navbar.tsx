@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { Home, Pencil, Github, Linkedin, Mail, Sun, Moon, Target } from 'lucide-react'
+import { Home, Pencil, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -47,7 +47,7 @@ export default function Component() {
   }
 
   return (
-    <div className="fixed inset-x-0 bottom-0 flex justify-center items-center p-4">
+    <div className="sticky bottom-0 flex justify-center items-center p-4">
       <motion.div 
         className="w-full max-w-2xl"
         initial={{ y: 100, opacity: 0 }}

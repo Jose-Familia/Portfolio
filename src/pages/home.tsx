@@ -1,5 +1,5 @@
 import TypingAnimation from "@/components/typingAnimation";
-import Image from "next/image";
+
 
 export default function Home() {
     return (
@@ -8,7 +8,7 @@ export default function Home() {
             <h1 className="text-5xl font-bold text-center">
                 Hi,{' '}
                 <TypingAnimation
-                    steps={['my name is Jose Rene Familia', "i'm  a Front End Developer", 'Systems Engineer Student']}
+                    steps={['my name is Jose Rene Familia', "i'm  a Front End Developer", "i'm Systems Engineer Student"]}
                     loop={true}
                 />
             </h1>
