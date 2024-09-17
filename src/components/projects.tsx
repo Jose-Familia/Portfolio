@@ -24,58 +24,17 @@ const projectCategories: ProjectCategory[] = [
   {
     name: 'Frontend',
     icon: <Code className="w-6 h-6" />,
-    projects: [
-      {
-        name: 'E-commerce Website',
-        description: 'A responsive e-commerce site built with React and Redux',
-        technologies: ['React', 'Redux', 'Tailwind CSS'],
-        githubUrl: 'https://github.com/yourusername/ecommerce-frontend',
-        liveUrl: 'https://ecommerce-example.com'
-      },
-      {
-        name: 'Portfolio Site',
-        description: 'Personal portfolio showcasing my projects and skills',
-        technologies: ['Next.js', 'Framer Motion', 'Styled Components'],
-        githubUrl: 'https://github.com/yourusername/portfolio',
-        liveUrl: 'https://yourportfolio.com'
-      }
-    ]
+    projects: []
   },
   {
     name: 'Backend',
     icon: <Server className="w-6 h-6" />,
-    projects: [
-      {
-        name: 'RESTful API',
-        description: 'A RESTful API for a blog application',
-        technologies: ['Node.js', 'Express', 'MongoDB'],
-        githubUrl: 'https://github.com/yourusername/blog-api'
-      },
-      {
-        name: 'Authentication Service',
-        description: 'Microservice for user authentication and authorization',
-        technologies: ['Python', 'Flask', 'JWT', 'PostgreSQL'],
-        github: 'https://github.com/yourusername/auth-service'
-      }
-    ]
+    projects: []
   },
   {
     name: 'DevOps',
     icon: <Cloud className="w-6 h-6" />,
-    projects: [
-      {
-        name: 'CI/CD Pipeline',
-        description: 'Automated CI/CD pipeline for a microservices architecture',
-        technologies: ['Jenkins', 'Docker', 'Kubernetes'],
-        githubUrl: 'https://github.com/yourusername/cicd-pipeline'
-      },
-      {
-        name: 'Infrastructure as Code',
-        description: 'IaC templates for cloud resources',
-        technologies: ['Terraform', 'AWS', 'Ansible'],
-        githubUrl: 'https://github.com/yourusername/infrastructure-as-code'
-      }
-    ]
+    projects: []
   }
 ]
 
