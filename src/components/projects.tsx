@@ -24,17 +24,51 @@ const projectCategories: ProjectCategory[] = [
   {
     name: 'Frontend',
     icon: <Code className="w-6 h-6" />,
-    projects: []
+    projects: [
+      {
+        name: 'Netflix Landing Page',
+        description: 'Single page application of Netflix landing page',
+        technologies: ['HTML', 'CSS', 'JavaScript'],
+        githubUrl: 'https://github.com/Jose-Familia/Netflix-LandingPage',
+        liveUrl: 'https://landingnextflix.netlify.app/',
+      }
+    ]
   },
   {
     name: 'Backend',
     icon: <Server className="w-6 h-6" />,
-    projects: []
+    projects: [
+      {
+        name: 'Mern CRUD',
+        description: 'Crud application using MERN stack',
+        technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+        githubUrl: 'https://github.com/Jose-Familia/MERN-Stack',
+      },
+      {
+        name: 'Golang Books API',
+        description: 'Books API using Golang & PostgreSQL',
+        technologies: ['Go', 'PostgreSQL'],
+        githubUrl: 'https://github.com/Jose-Familia/Books_Crud',
+      },
+      {
+        name: 'Node.js REST API',
+        description: 'REST API Users using Node.js & Express',
+        technologies: ['Node.js', 'Express', 'MongoDB'],
+        githubUrl: 'https://github.com/Jose-Familia/My-Node-API',
+      }
+    ]
   },
   {
     name: 'DevOps',
     icon: <Cloud className="w-6 h-6" />,
-    projects: []
+    projects: [
+      {
+        name: 'Github Profile Readme',
+        description: 'My personal Github profile readme',
+        technologies: ['Github Actions', 'Node.js'],
+        githubUrl: 'https://github.com/Jose-Familia/Jose-Familia',
+      }
+    ]
   }
 ]
 
