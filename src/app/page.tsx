@@ -9,8 +9,6 @@ export default function myApp() {
     <div>
       <BlurFade delay={0.8}>
       <Home></Home>
-      <SkillSection />
-      <NavBar></NavBar>
       </BlurFade>
     </div>
   );

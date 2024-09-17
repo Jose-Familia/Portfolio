@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { Home, Pencil, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react'
+import { Home, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -9,7 +9,7 @@ const icons = [
   { href: "/", Icon: Home, label: "Home" },
   { href: "https://github.com/Jose-Familia", Icon: Github, label: "GitHub"},
   { href: "https://www.linkedin.com/in/jrfamilia", Icon: Linkedin, label: "LinkedIn"},
-  { href: "https://twitter.com", Icon: ({ size = any, ...props }) => (
+  { href: "https://twitter.com", Icon: ({ size, ...props }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={size}
