@@ -9,7 +9,7 @@ const icons = [
   { href: "/", Icon: Home, label: "Home" },
   { href: "https://github.com/Jose-Familia", Icon: Github, label: "GitHub"},
   { href: "https://www.linkedin.com/in/jrfamilia", Icon: Linkedin, label: "LinkedIn"},
-  { href: "https://twitter.com", Icon: ({ size, ...props }) => (
+  { href: "https://twitter.com", Icon: ({ size = any, ...props }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={size}
