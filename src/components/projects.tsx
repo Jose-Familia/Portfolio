@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import { Github, Globe, Server, Code, Cloud } from 'lucide-react'
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGit, FaGithub, FaDatabase } from 'react-icons/fa'
-import { SiTailwindcss, SiMongodb, SiPostgresql, SiGoland, SiExpress, SiNextdotjs } from 'react-icons/si'
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGit, FaGithub, FaDatabase} from 'react-icons/fa'
+import { FaGolang } from "react-icons/fa6";
+import { SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiNextdotjs } from 'react-icons/si'
 
 // Definición de tipos para nuestros proyectos
 type Project = {
@@ -36,8 +37,8 @@ const projectCategories: ProjectCategory[] = [
           { name: 'JavaScript', icon: <FaJs /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/Netflix-LandingPage',
-        liveUrl: 'https://netlang.netlify.app/',
-      }
+        liveUrl: '',
+      },
     ]
   },
   {
@@ -60,7 +61,7 @@ const projectCategories: ProjectCategory[] = [
         name: 'Golang Books API',
         description: 'Books API using Golang & PostgreSQL',
         technologies: [
-          { name: 'Go', icon: <SiGoland /> },
+          { name: 'Go', icon: <FaGolang/> },
           { name: 'PostgreSQL', icon: <SiPostgresql /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/Books_Crud',
@@ -89,7 +90,7 @@ const projectCategories: ProjectCategory[] = [
           { name: 'Node.js', icon: <FaNodeJs /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/Jose-Familia',
-      }
+      },
     ]
   }
 ]
