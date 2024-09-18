@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Code2, Database, Globe, Server } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Code2, Database, Globe, Server } from "lucide-react";
 
 const skillsData = [
   {
@@ -23,12 +23,12 @@ const skillsData = [
     icon: <Code2 className="h-6 w-6 text-primary" />,
     skills: ["Docker", "CI/CD", "Git", "GitHub Actions"],
   },
-]
+];
 
 export default function SkillsSection() {
   return (
     <section className="py-8 bg-background flex items-center justify-center">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <h2 className="text-2xl font-bold text-center mb-6">My Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {skillsData.map((category) => (
@@ -51,5 +51,5 @@ export default function SkillsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
