@@ -3,12 +3,14 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import { Github, Globe, Server, Code, Cloud } from 'lucide-react'
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGit, FaGithub, FaDatabase } from 'react-icons/fa'
+import { SiTailwindcss, SiMongodb, SiPostgresql, SiGoland, SiExpress, SiNextdotjs } from 'react-icons/si'
 
 // Definición de tipos para nuestros proyectos
 type Project = {
   name: string
   description: string
-  technologies: string[]
+  technologies: { name: string, icon: React.ReactNode }[]
   githubUrl: string
   liveUrl?: string
 }
@@ -28,7 +30,11 @@ const projectCategories: ProjectCategory[] = [
       {
         name: 'Netflix Landing Page',
         description: 'Single page application of Netflix landing page',
-        technologies: ['HTML', 'CSS', 'JavaScript'],
+        technologies: [
+          { name: 'HTML', icon: <FaHtml5 /> },
+          { name: 'CSS', icon: <FaCss3Alt /> },
+          { name: 'JavaScript', icon: <FaJs /> }
+        ],
         githubUrl: 'https://github.com/Jose-Familia/Netflix-LandingPage',
         liveUrl: 'https://landingnextflix.netlify.app/',
       }
@@ -41,19 +47,32 @@ const projectCategories: ProjectCategory[] = [
       {
         name: 'Mern CRUD',
         description: 'Crud application using MERN stack',
-        technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+        technologies: [
+          { name: 'React', icon: <FaReact /> },
+          { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+          { name: 'Node.js', icon: <FaNodeJs /> },
+          { name: 'Express', icon: <SiExpress /> },
+          { name: 'MongoDB', icon: <SiMongodb /> }
+        ],
         githubUrl: 'https://github.com/Jose-Familia/MERN-Stack',
       },
       {
         name: 'Golang Books API',
         description: 'Books API using Golang & PostgreSQL',
-        technologies: ['Go', 'PostgreSQL'],
+        technologies: [
+          { name: 'Go', icon: <SiGoland /> },
+          { name: 'PostgreSQL', icon: <SiPostgresql /> }
+        ],
         githubUrl: 'https://github.com/Jose-Familia/Books_Crud',
       },
       {
         name: 'Node.js REST API',
         description: 'REST API Users using Node.js & Express',
-        technologies: ['Node.js', 'Express', 'MongoDB'],
+        technologies: [
+          { name: 'Node.js', icon: <FaNodeJs /> },
+          { name: 'Express', icon: <SiExpress /> },
+          { name: 'MongoDB', icon: <SiMongodb /> }
+        ],
         githubUrl: 'https://github.com/Jose-Familia/My-Node-API',
       }
     ]
@@ -65,7 +84,10 @@ const projectCategories: ProjectCategory[] = [
       {
         name: 'Github Profile Readme',
         description: 'My personal Github profile readme',
-        technologies: ['Github Actions', 'Node.js'],
+        technologies: [
+          { name: 'Github Actions', icon: <FaGithub /> },
+          { name: 'Node.js', icon: <FaNodeJs /> }
+        ],
         githubUrl: 'https://github.com/Jose-Familia/Jose-Familia',
       }
     ]
@@ -120,10 +142,11 @@ export default function Projects() {
                     <ul className="mt-1 flex flex-wrap gap-1 mb-2">
                       {project.technologies.map((tech) => (
                         <li
-                          key={tech}
-                          className="px-2 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs"
+                          key={tech.name}
+                          className="flex items-center space-x-1 px-2 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs"
                         >
-                          {tech}
+                          {tech.icon}
+                          <span>{tech.name}</span>
                         </li>
                       ))}
                     </ul>

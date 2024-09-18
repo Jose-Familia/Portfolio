@@ -9,7 +9,7 @@ export default function Home() {
       <About />
       <SkillSection />
       <Projects />
-      <NavBar />
+      <NavBar/>
     </div>
   );
 }

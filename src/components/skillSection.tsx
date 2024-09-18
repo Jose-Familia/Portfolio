@@ -22,7 +22,7 @@ const skillsData = [
     category: "DevOps",
     icon: <Code2 className="h-6 w-6 text-primary" />,
     skills: ["Docker", "CI/CD", "Git", "GitHub Actions"],
-  },
+  }
 ];
 
 export default function SkillsSection() {
