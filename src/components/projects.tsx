@@ -36,7 +36,7 @@ const projectCategories: ProjectCategory[] = [
           { name: 'JavaScript', icon: <FaJs /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/Netflix-LandingPage',
-        liveUrl: 'https://landingnextflix.netlify.app/',
+        liveUrl: 'https://netlang.netlify.app/',
       }
     ]
   },
