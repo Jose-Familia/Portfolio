@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code2, Database, Globe, Server } from "lucide-react";
+import { Cloud, Code, Code2, Database, Globe, Server } from "lucide-react";
 
 const skillsData = [
   {
     category: "Frontend",
-    icon: <Globe className="h-6 w-6 text-primary" />,
+    icon: <Code className="h-6 w-6 text-primary" />,
     skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript", "HTML5", "CSS3"],
   },
   {
@@ -20,7 +20,7 @@ const skillsData = [
   },
   {
     category: "DevOps",
-    icon: <Code2 className="h-6 w-6 text-primary" />,
+    icon: <Cloud className="h-6 w-6 text-primary" />,
     skills: ["Docker", "CI/CD", "Git", "GitHub Actions"],
   }
 ];
