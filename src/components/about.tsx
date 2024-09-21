@@ -1,16 +1,23 @@
+'use client'
 import React from 'react';
+import { useState } from 'react';
 import TypingAnimation from './ui/typingAnimation';
 
+const steps: string[] = ['my name is Jose Rene Familia', "i'm a Front End Developer", "i'm a Systems Engineer Student"]
+
 export default function About() {
+
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-5xl font-bold text-center py-9">
         <h1 className="text-5xl font-bold text-center">
           Hi,{' '}
-          <TypingAnimation
-            steps={['my name is Jose Rene Familia', "i'm a Front End Developer", "i'm a Systems Engineer Student"]}
-            loop={true}
-          />
+          <div className="inline-block h-16 sm:h-20 lg:h-24">
+            <TypingAnimation
+              loop={true}
+              steps={steps}
+            />
+          </div>
         </h1>
       </div>
 

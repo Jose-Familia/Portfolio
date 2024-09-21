@@ -7,14 +7,18 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8">
+    <div>
+      <div className="flex flex-col items-center justify-center py-2 px-4 sm:px-6 lg:px-8">
+        <BlurFade delay={0.5}>
+          <About />
+          <SkillSection />
+          <Projects />
+        </BlurFade>
+        <NavBar />
+      </div>
       <BlurFade delay={0.5}>
-      <About />
-      <SkillSection />
-      <Projects />
-      <Footer />
+        <Footer />
       </BlurFade>
-      <NavBar/>
     </div>
   );
 }

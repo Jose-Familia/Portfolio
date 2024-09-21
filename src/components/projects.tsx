@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { Github, Globe, Server, Code, Cloud } from 'lucide-react'
 import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGithub, FaReact } from 'react-icons/fa'
-import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiTailwindcss } from 'react-icons/si'
+import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiTailwindcss, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma } from 'react-icons/si'
+import { DiMsqlServer } from "react-icons/di";
 
 type Technology = {
   name: string
@@ -42,19 +43,6 @@ const projectCategories: ProjectCategory[] = [
         githubUrl: 'https://github.com/Jose-Familia/Netflix-LandingPage',
         liveUrl: '',
       },
-      {
-        name: 'Crud Mern Stack',
-        description: 'Crud application using MERN stack',
-        technologies: [
-          { name: 'React', icon: <FaReact /> },
-          { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
-          { name: 'Node.js', icon: <FaNodeJs /> },
-          { name: 'Express.js', icon: <SiExpress /> },
-          { name: 'MongoDB', icon: <SiMongodb /> }
-        ],
-        githubUrl: 'https://github.com/Jose-Familia/MERN-Stack',
-        liveUrl: '',
-      }
     ]
   },
   {
@@ -79,6 +67,27 @@ const projectCategories: ProjectCategory[] = [
           { name: 'MongoDB', icon: <SiMongodb /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/My-Node-API',
+      },
+      {
+        name: 'Estudents System Form Application',
+        description: 'Form application using C#.NET & SQL Server',
+        technologies: [
+          { name: 'C#', icon: <SiCsharp /> },
+          { name: '.NET', icon: <SiDotnet /> },  
+          { name: 'SQL Server', icon: <DiMsqlServer/> }
+        ],
+        githubUrl: 'https://github.com/Jose-Familia/SistemadeEstudiantes',
+      },
+      {
+        name: 'Prisma REST API',
+        description: 'Rest API using Prisma & PostgreSQL',
+        technologies: [
+          { name: 'Prisma', icon: <SiPrisma /> },
+          { name: 'Node.js', icon: <SiNodedotjs /> },  
+          { name: 'Express.js', icon: <SiExpress/> },
+          { name: 'PostgreSQL', icon: <SiPostgresql/> }
+        ],
+        githubUrl: 'https://github.com/Jose-Familia/Prisma-Users-API',
       }
     ]
   },
