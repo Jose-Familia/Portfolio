@@ -2,7 +2,7 @@
 import React from 'react';
 import TypingAnimation from './ui/typingAnimation';
 
-const steps: string[] = ['my name is Jose Rene Familia', "i'm a Front End Developer", "i'm a Systems Engineer Student"];
+const steps: string[] = ['my name is Jose Familia', "Frontend Developer", "Systems Engineer Student"];
 
 export default function About() {
   return (

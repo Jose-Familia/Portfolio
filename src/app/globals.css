@@ -37,3 +37,13 @@
   }
 
 }
+
+@media (max-width: 390px) and (max-height: 844px), (max-width: 384px) and (max-height: 832px) {
+  .custom-text-size {
+    font-size: 3rem;
+  }
+
+  .custom-typing-height {
+    height: 80px; 
+  }
+}
