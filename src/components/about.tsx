@@ -9,7 +9,7 @@ const steps: string[] = [
 ];
 
 export default function About() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,7 +17,7 @@ export default function About() {
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); 
+    handleResize(); // Set initial state
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -28,7 +28,7 @@ export default function About() {
     <div className="px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-5xl font-bold text-center py-16">
         <h1 className="text-5xl font-bold">
-          Hi, I'm{' '}
+          Hi, Im{' '}
           <div
             className={`inline-block ${isMobile ? 'h-24' : 'h-32'}`}
             style={{
