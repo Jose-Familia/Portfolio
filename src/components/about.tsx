@@ -4,8 +4,8 @@ import TypingAnimation from './ui/typingAnimation';
 
 const steps: string[] = [
   "my name is Jose Familia",
-  "Frontend Developer",
-  "Systems Engineer Student"
+  "I'm Frontend Developer",
+  "I'm Systems Engineer Student"
 ];
 
 export default function About() {
