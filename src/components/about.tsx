@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import TypingAnimation from './ui/typingAnimation';
 
 const steps: string[] = [
-  "Jose Rene Familia",
-  "Frontend Developer",
-  "Systems Engineer Student"
+  "My name is Jose Familia",
+  "I am Frontend Developer",
+  "I am an Systems Engineer Student"
 ];
 
 export default function About() {
@@ -26,9 +26,8 @@ export default function About() {
 
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-5xl font-bold text-center py-16">
+      <div className="text-4xl font-bold justify-center text-center py-12">
         <h1 className="text-5xl font-bold">
-          Hi, Im{' '}
           <div
             className={`inline-block ${isMobile ? 'h-24' : 'h-32'}`}
             style={{
@@ -40,7 +39,7 @@ export default function About() {
             }}
           >
             {isMobile ? (
-              "my name is Jose Familia"
+              "My name is Jose Familia"
             ) : (
               <TypingAnimation loop={true} steps={steps} />
             )}
