@@ -57,7 +57,7 @@ export default function AboutPage() {
                     <article className="max-w-2xl w-full mx-auto p-8 bg-white dark:bg-gray-950 rounded-lg shadow-md">
                         <BlurFade delay={0.5}>
                             <Image
-                                src="https://cdn.jsdelivr.net/gh/alohe/memojis/png/notion_1.png"
+                                src="/images/profile.png"
                                 alt="Jose Rene Familia"
                                 width={200}
                                 height={200}
