@@ -15,6 +15,8 @@ const PersonalContent = () => (
     <address className="not-italic">
       Santo Domingo, Dominican Republic
     </address>
+    <meta name="keywords" content="Jose Rene Familia, web developer, frontend developer, portfolio" />
+    <meta name="author" content="Jose Rene Familia" />
   </>
 );
 
