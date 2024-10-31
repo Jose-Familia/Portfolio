@@ -24,6 +24,10 @@ export default function About() {
     };
   }, []);
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-4xl font-bold justify-center text-center py-12">
