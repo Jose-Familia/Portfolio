@@ -50,8 +50,6 @@ export default function SkillsSection() {
           ))}
         </div>
       </div>
-      <meta name="keywords" content="Jose Rene Familia, web developer, frontend developer, portfolio" />
-      <meta name="author" content="Jose Rene Familia" />
     </section>
   );
 }
