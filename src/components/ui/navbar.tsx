@@ -83,8 +83,6 @@ export default function NavBar() {
           {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
         </motion.button>
       </motion.div>
-      <meta name="keywords" content="Jose Rene Familia, web developer, frontend developer, portfolio" />
-      <meta name="author" content="Jose Rene Familia" />
     </motion.nav>
   )
 }

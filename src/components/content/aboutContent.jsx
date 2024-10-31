@@ -9,8 +9,6 @@ const AboutContent = () => (
     <p className="mb-4">
       About two years ago, I started getting interested in programming and its various areas, but the one that caught my attention the most was web programming. Since then, I have been studying and learning everything that I consider useful in this field. However, with so many technologies available, it is difficult to choose just one, as each technology is unique and has multiple applications. Therefore, I decided to learn several technologies, focusing mainly on frontend development.
     </p>
-    <meta name="keywords" content="Jose Rene Familia, web developer, frontend developer, portfolio" />
-    <meta name="author" content="Jose Rene Familia" />
   </>
 );
 

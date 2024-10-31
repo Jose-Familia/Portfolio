@@ -29,8 +29,6 @@ const ExperienceContent = () => (
         <li>Git</li>
       </ul>
     </details>
-    <meta name="keywords" content="Jose Rene Familia, web developer, frontend developer, portfolio" />
-    <meta name="author" content="Jose Rene Familia" />
   </>
 );
 
