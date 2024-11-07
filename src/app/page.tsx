@@ -8,6 +8,8 @@ import Head from 'next/head';
 
 export default function Home() {
   return (
+    <div>
+      <title>Jose Familia | Portfolio 🧑‍🎓 </title>
       <div className="flex flex-col items-center justify-center py-2 px-4 sm:px-6 lg:px-8">
         <BlurFade delay={0.5}>
           <About />
@@ -19,5 +21,6 @@ export default function Home() {
       <BlurFade delay={0.5}>
         <Footer />
       </BlurFade>
+   </div>
   );
 }
