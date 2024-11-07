@@ -4,9 +4,9 @@ import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Github, Globe, Server, Code, Cloud } from 'lucide-react'
-import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGithub, FaReact } from 'react-icons/fa'
-import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiTailwindcss, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma } from 'react-icons/si'
-import { DiMsqlServer } from "react-icons/di";
+import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGithub } from 'react-icons/fa'
+import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma } from 'react-icons/si'
+import { DiMsqlServer } from "react-icons/di"
 
 type Technology = {
   name: string
@@ -74,7 +74,7 @@ const projectCategories: ProjectCategory[] = [
         technologies: [
           { name: 'C#', icon: <SiCsharp /> },
           { name: '.NET', icon: <SiDotnet /> },  
-          { name: 'SQL Server', icon: <DiMsqlServer/> }
+          { name: 'SQL Server', icon: <DiMsqlServer /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/SistemadeEstudiantes',
       },
@@ -84,8 +84,8 @@ const projectCategories: ProjectCategory[] = [
         technologies: [
           { name: 'Prisma', icon: <SiPrisma /> },
           { name: 'Node.js', icon: <SiNodedotjs /> },  
-          { name: 'Express.js', icon: <SiExpress/> },
-          { name: 'PostgreSQL', icon: <SiPostgresql/> }
+          { name: 'Express.js', icon: <SiExpress /> },
+          { name: 'PostgreSQL', icon: <SiPostgresql /> }
         ],
         githubUrl: 'https://github.com/Jose-Familia/Prisma-Users-API',
       }
@@ -106,7 +106,7 @@ const projectCategories: ProjectCategory[] = [
       }
     ]
   }
-]
+];
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -141,39 +141,41 @@ function ProjectCard({ project }: { project: Project }) {
   )
 }
 
-export default function Projects() {
+export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState(projectCategories[0].name)
 
   return (
-    <div className="container mx-auto max-w-screen-lg px-2 py-8">
-      <h2 className="text-2xl font-bold text-center mb-6">My Projects</h2>
-      <div className="mb-6">
-        <div className="flex p-1 space-x-1 bg-secondary rounded-xl max-w-md mx-auto">
-          {projectCategories.map((category) => (
-            <button
-              key={category.name}
-              onClick={() => setActiveTab(category.name)}
-              className={`flex-1 flex items-center justify-center space-x-1 py-2 px-2 text-xs font-medium leading-5 rounded-lg transition-colors duration-200 ease-out ${
-                activeTab === category.name
-                  ? 'bg-background text-foreground shadow'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
-              }`}
-            >
-              {category.icon}
-              <span>{category.name}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-      {projectCategories.map((category) => (
-        category.name === activeTab && (
-          <div key={category.name} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {category.projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
+    <section className="w-full bg-background">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
+        <div className="mb-8">
+          <div className="flex p-1 space-x-1 bg-secondary rounded-xl max-w-md mx-auto">
+            {projectCategories.map((category) => (
+              <button
+                key={category.name}
+                onClick={() => setActiveTab(category.name)}
+                className={`flex-1 flex items-center justify-center space-x-1 py-2 px-2 text-xs font-medium leading-5 rounded-lg transition-colors duration-200 ease-out ${
+                  activeTab === category.name
+                    ? 'bg-background text-foreground shadow'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
+                }`}
+              >
+                {category.icon}
+                <span>{category.name}</span>
+              </button>
             ))}
           </div>
-        )
-      ))}
-    </div>
+        </div>
+        {projectCategories.map((category) => (
+          category.name === activeTab && (
+            <div key={category.name} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {category.projects.map((project) => (
+                <ProjectCard key={project.name} project={project} />
+              ))}
+            </div>
+          )
+        ))}
+      </div>
+    </section>
   )
 }
