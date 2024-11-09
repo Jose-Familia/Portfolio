@@ -116,9 +116,9 @@ function ProjectCard({ project }: { project: Project }) {
         <CardDescription className="text-sm text-muted-foreground">{project.description}</CardDescription>
       </CardHeader>
       <CardContent className="p-4 pt-2 pb-0">
-        <div className="flex flex-wrap gap-1 mb-2">
+        <div className="flex flex-wrap gap-2 mb-2">
           {project.technologies.map((tech) => (
-            <Badge key={tech.name} variant="secondary" className="flex items-center gap-1 px-2 py-0.5 text-xs rounded-full">
+            <Badge key={tech.name} variant="secondary" className="flex items-center gap-1 px-2 py-1 text-xs rounded-full">
               {tech.icon}
               <span>{tech.name}</span>
             </Badge>
@@ -145,7 +145,7 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState(projectCategories[0].name)
 
   return (
-    <div className="container mx-auto max-w-screen-lg px-2 py-8">
+    <div className="container mx-auto max-w-screen-lg px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">My Projects</h2>
       <div className="mb-6">
         <div className="flex p-1 space-x-1 bg-secondary rounded-xl max-w-md mx-auto">
@@ -167,7 +167,7 @@ export default function Projects() {
       </div>
       {projectCategories.map((category) => (
         category.name === activeTab && (
-          <div key={category.name} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div key={category.name} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.projects.map((project) => (
               <ProjectCard key={project.name} project={project} />
             ))}
