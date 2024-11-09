@@ -41,7 +41,11 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({ steps, loop = true })
     return () => clearTimeout(typingTimeout);
   }, [charIndex, isDeleting, stepIndex, steps, loop]);
 
-  return <span>{displayText}</span>;
+  return (
+    <>
+      <span>{displayText}</span>
+    </>
+  );
 };
 
 export default TypingAnimation;

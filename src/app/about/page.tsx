@@ -38,19 +38,6 @@ export default function AboutPage() {
         <>
             <Head>
                 <title>About Jose Rene Familia</title>
-                <meta
-                    name="description"
-                    content="Learn more about Jose Rene Familia, a passionate web developer and frontend rookie."
-                />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta property="og:title" content="About Jose Rene Familia" />
-                <meta
-                    property="og:description"
-                    content="Learn more about Jose Rene Familia, a passionate web developer and frontend rookie."
-                />
-                <meta property="og:image" content="/images/profile.jpg" />
-                <meta property="og:url" content="portfolio-josefamilia.vercel.app" />
-                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <div className="min-h-screen flex flex-col bg-gradient-radial from-white via-blue-200 to-blue-500 dark:from-gray-800 dark:via-gray-900 dark:to-black">
                 <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
