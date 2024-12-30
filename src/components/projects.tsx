@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Github, Globe, Server, Code, Cloud } from 'lucide-react'
-import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGithub } from 'react-icons/fa'
-import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma } from 'react-icons/si'
+import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGithub, FaFileExcel } from 'react-icons/fa'
+import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma, SiPython } from 'react-icons/si'
 import { DiMsqlServer } from "react-icons/di"
 
 type Technology = {
@@ -50,44 +50,22 @@ const projectCategories: ProjectCategory[] = [
     icon: <Server className="w-5 h-5" />,
     projects: [
       {
-        name: 'Golang Books API',
-        description: 'Books API using Golang & PostgreSQL',
+        name: 'TI Tickets Administrator',
+        description: 'Create a IT tickets with an simple interfaz and .xlsx archives',
         technologies: [
-          { name: 'Go', icon: <SiGoland /> },
-          { name: 'PostgreSQL', icon: <SiPostgresql /> }
+          { name: 'python', icon:  <SiPython/>},
+          { name: 'Excel', icon: <FaFileExcel/>}
         ],
-        githubUrl: 'https://github.com/Jose-Familia/Books_Crud',
+        githubUrl: 'https://github.com/Jose-Familia/TI_Tickets-administration',
       },
       {
-        name: 'Node.js REST API',
-        description: 'REST API Users using Node.js & Express',
+        name: 'Meeting Planer',
+        description: 'AutoMeetingBot is an RPA that automates the entire flow related to planning, executing and monitoring virtual meetings.',
         technologies: [
-          { name: 'Node.js', icon: <FaNodeJs /> },
-          { name: 'Express.js', icon: <SiExpress /> },
-          { name: 'MongoDB', icon: <SiMongodb /> }
+          { name: 'python', icon:  <SiPython/>},
+          { name: 'Postgresql', icon: <SiPostgresql/>}
         ],
-        githubUrl: 'https://github.com/Jose-Familia/My-Node-API',
-      },
-      {
-        name: 'Estudents System Form Application',
-        description: 'Form application using C#.NET & SQL Server',
-        technologies: [
-          { name: 'C#', icon: <SiCsharp /> },
-          { name: '.NET', icon: <SiDotnet /> },  
-          { name: 'SQL Server', icon: <DiMsqlServer /> }
-        ],
-        githubUrl: 'https://github.com/Jose-Familia/SistemadeEstudiantes',
-      },
-      {
-        name: 'Prisma REST API',
-        description: 'Rest API using Prisma & PostgreSQL',
-        technologies: [
-          { name: 'Prisma', icon: <SiPrisma /> },
-          { name: 'Node.js', icon: <SiNodedotjs /> },  
-          { name: 'Express.js', icon: <SiExpress /> },
-          { name: 'PostgreSQL', icon: <SiPostgresql /> }
-        ],
-        githubUrl: 'https://github.com/Jose-Familia/Prisma-Users-API',
+        githubUrl: 'https://github.com/Jose-Familia/Meeting_Planning',
       }
     ]
   },
