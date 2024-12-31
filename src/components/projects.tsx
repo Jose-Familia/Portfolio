@@ -40,7 +40,7 @@ const projectCategories: ProjectCategory[] = [
           { name: 'Typescript', icon: < SiTypescript /> },
         ],
         githubUrl: 'https://github.com/Jose-Familia/Markdown_Editor',
-        liveUrl: 'https://markdown-editor-cju1ji4kv-jose-familias-projects.vercel.app/',
+        liveUrl: 'https://markdown-editor-rose-xi.vercel.app/',
       },
     ]
   },
