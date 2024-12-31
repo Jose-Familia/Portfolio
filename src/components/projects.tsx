@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { Github, Globe, Server, Code, Cloud } from 'lucide-react'
 import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGithub, FaFileExcel } from 'react-icons/fa'
-import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma, SiPython } from 'react-icons/si'
+import { SiMongodb, SiPostgresql, SiGoland, SiExpress, SiCsharp, SiDotnet, SiNodedotjs, SiPrisma, SiPython, SiTypescript, SiAstro } from 'react-icons/si'
 import { DiMsqlServer } from "react-icons/di"
 
 type Technology = {
@@ -33,15 +33,14 @@ const projectCategories: ProjectCategory[] = [
     icon: <Code className="w-5 h-5" />,
     projects: [
       {
-        name: 'Netflix Landing Page',
-        description: 'Single page application of Netflix landing page',
+        name: 'Markdown Editor',
+        description: 'Markdown Online Editor In Astro',
         technologies: [
-          { name: 'HTML', icon: <FaHtml5 /> },
-          { name: 'CSS', icon: <FaCss3Alt /> },
-          { name: 'JavaScript', icon: <FaJs /> }
+          { name: 'Astro', icon: <SiAstro /> },
+          { name: 'Typescript', icon: < SiTypescript /> },
         ],
-        githubUrl: 'https://github.com/Jose-Familia/Netflix-LandingPage',
-        liveUrl: '',
+        githubUrl: 'https://github.com/Jose-Familia/Markdown_Editor',
+        liveUrl: 'markdown-editor-rose-xi.vercel.app',
       },
     ]
   },
