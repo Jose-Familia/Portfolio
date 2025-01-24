@@ -1,0 +1,41 @@
+name: Update Projects
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  repository_dispatch:
+    types: [project_created]
+
+jobs:
+  update-projects:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: 🛠️ Configurar Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: 🔧 Instalar dependencias
+        run: go mod tidy
+
+      - name: 🚀 Ejecutar script de actualización
+        run: |
+          cd scripts
+          go run update_projects.go
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: "Jose-Familia"
+          GITHUB_API_URL: "https://api.github.com"
+
+      - name: 📂 Confirmar cambios y hacer push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/components/projects.tsx
+          git commit -m "🔄 Actualización automática de proyectos"
+          git push
